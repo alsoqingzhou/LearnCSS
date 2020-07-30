@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+
+            display: flex;
+            flex-direction: column;
+        }
+        .box .box-item:first-child {
+            width: 100%;
+            border: 1px solid green;
+            height: 250px;
+        }
+        .box .box-item:last-child {
+            flex: 1; /* flex can be any number*/
+            border: 1px solid blue;
+
+            display: flex;
+            flex-direction: row;
+        }
+        .item {
+            flex: 1;
+            border: 1px solid yellow;
+            /* width: 50%; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒子500*500px，顶部盒子width为100%，高度250px，下面两个盒子宽度各一半
+    高度占满剩下的所有高度 -->
+
+    <div class="box">
+        <div class="box-item">item1</div>
+        <div class="box-item">
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+        </div>
+    </div>
+</body>
+</html>
